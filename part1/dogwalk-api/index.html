@@ -16,11 +16,12 @@
 
             @keyframes spinBackground {
                 0% { filter: hue-rotate(0deg); }
-                to { filter: pink; }
+                to { filter: hue-rotate(360deg); }
             }
 
             /* Accessibility violation - poor contrast */
             h1 {
+                animation: jump 0.5s infite
                 color: white;
                 text-shadow: 0 0 10px red;
             }
