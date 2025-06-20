@@ -25,7 +25,7 @@ var pool = mysql.createPool({
     database: 'DogWalkService'
 });
 
-app.get('/dogs', async (req, res) => {
+app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await pool.query(`
             SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
