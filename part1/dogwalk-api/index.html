@@ -133,7 +133,12 @@
                         dogImage: ''
                     }
                 },
-                mounted
+                mounted() {
+                    this.getDog();
+                },
+                methods: {
+
+                }
             })
         </script>
     </body>
