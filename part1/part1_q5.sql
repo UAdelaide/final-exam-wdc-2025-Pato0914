@@ -23,4 +23,4 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Rocky'), '2025-06-11 10:00:00', 60, 'City Park', 'open'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Daisy'), '2025-06-12 11:00:00', 35, 'Hillside Trail', 'cancelled'),
-((SELECT dog_id FROM Dogs WHERE name = 'Milo'), '2025-06-12 13:00:00', 40, 'Riverbank Walk', 'completed'),
+((SELECT dog_id FROM Dogs WHERE name = 'Milo'), '2025-06-12 13:00:00', 40, 'Riverbank Walk', 'completed');
