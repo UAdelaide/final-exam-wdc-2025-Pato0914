@@ -136,6 +136,7 @@
                 mounted() {
                     this.getDog();
                 },
+                // Randomly generate dog details
                 methods: {
                     async getDog() {
                         const res = await fetch('https://dog.ceo/api/breeds/image/random');
