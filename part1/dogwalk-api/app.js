@@ -49,6 +49,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
             walkrequest.duration_minutes,
             walkrequest.location,
             user.username AS owner_username
+            FROM WalkRequests walkrequest
+            JOIN Dogs dog ON walkrequest.dog_id = dog.dog_id
             `)
     }
 })
