@@ -18,11 +18,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
-app.get('/api/dogs', async (req, res =>) {
+app.get('/dogs', async (req, res) => {
     try {
-        
+        const [rows] = await pool.query(`
+            SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username
+            FROM Dogs
+            JOIN Users ON Dogs.owner_id = Users.user_id
+        `);
+        res.json(rows);
+    } catch (err) {
+        console.error('DB Error:', err.message);
+        res.status(500).json({error: 'Failed to fetch dogs'});
     }
-})
+});
+
 
 
 module.exports = app;
