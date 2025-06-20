@@ -52,7 +52,11 @@ app.get('/api/walkrequests/open', async (req, res) => {
             FROM WalkRequests walkrequest
             JOIN Dogs dog ON walkrequest.dog_id = dog.dog_id
             JOIN Users user ON dog.owner_id = user.user_id
-            WHERE walkrequest.status = ''`)
+            WHERE walkrequest.status = 'open
+        '`)
+        res.json(rows);
+    } catch (err) {
+        console.error
     }
 })
 
