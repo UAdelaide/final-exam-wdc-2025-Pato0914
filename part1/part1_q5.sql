@@ -17,3 +17,4 @@ VALUES
 ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Milo', 'small');
 
 -- Insert 5 walk requests using subqueries to get dog_id
+INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, )
