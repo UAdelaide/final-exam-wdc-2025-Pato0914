@@ -66,7 +66,8 @@ app.get('/api/walkers/summary', async (req, res) => {
         const [rows] = await pool.query(`
             SELECT
             user.username AS walker_username,
-            COUNT()`)
+            COUNT(rate.rating_id) AS total_ratings,
+            `)
     }
 })
 
