@@ -22,28 +22,6 @@
       <button type="submit" class="btn btn-primary">Log In</button>
       <div v-if="error" class="mt-2 text-danger">{{ error }}</div>
     </form>
-
-    <h3 class="mt-5">All Registered Dogs</h3>
-    <table class="table table-bordered table-striped mt-3">
-      <thead class="table-light">
-        <tr>
-          <th>Dog ID</th>
-          <th>Name</th>
-          <th>Size</th>
-          <th>Owner ID</th>
-          <th>Photo</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="dog in dogs" :key="dog.id">
-          <td>{{ dog.id }}</td>
-          <td>{{ dog.name }}</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
     <!-- <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
