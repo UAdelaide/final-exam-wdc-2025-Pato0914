@@ -10,4 +10,8 @@ const pool = mysql.createPool({
     database: 'DogWalkService'
 });
 
-router.get('/dogs')
+router.get('/dogs', async (req, res) => {
+    try {
+        
+    }
+})
