@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
-//
+// MySQL connection pool
 var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
@@ -26,6 +26,7 @@ var pool = mysql.createPool({
     database: 'DogWalkService'
 });
 
+// /api/dogs
 app.get('/api/dogs', async (req, res) => {
     try {
         const [rows] = await pool.query(`
@@ -39,6 +40,7 @@ app.get('/api/dogs', async (req, res) => {
         res.status(500).json({error: 'Failed to fetch dogs'});
     }
 });
+
 
 app.get('/api/walkrequests/open', async (req, res) => {
     try {
