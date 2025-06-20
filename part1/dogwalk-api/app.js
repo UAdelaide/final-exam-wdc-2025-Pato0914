@@ -18,7 +18,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
-var pool = mysql.createPool
+var pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'DogWalkService'
+});
 
 app.get('/dogs', async (req, res) => {
     try {
