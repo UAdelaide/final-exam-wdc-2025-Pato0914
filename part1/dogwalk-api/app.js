@@ -53,12 +53,12 @@ app.get('/api/walkrequests/open', async (req, res) => {
             JOIN Dogs dog ON walkrequest.dog_id = dog.dog_id
             JOIN Users user ON dog.owner_id = user.user_id
             WHERE walkrequest.status = 'open
-        '`)
+        '`);
         res.json(rows);
     } catch (err) {
         console.error ('DB Error:', err.message);
         res.status(500).json({ error: 'Failed to fetch open walk requests' });
     }
-})
+});
 
 module.exports = app;
