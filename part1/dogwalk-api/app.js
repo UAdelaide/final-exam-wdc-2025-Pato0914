@@ -56,7 +56,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
         '`)
         res.json(rows);
     } catch (err) {
-        console.error
+        console.error ('DB Error:', err.message);
+        res.status(500)
     }
 })
 
