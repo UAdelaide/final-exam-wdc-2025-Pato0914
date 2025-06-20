@@ -8,3 +8,4 @@ VALUES
 ('eveowner','eve@example.com','hashed404','owner');
 
 -- Insert 5 dogs using subqueries to look up owner_id
+INSERT INTO Dogs (owner_id, name, size)
