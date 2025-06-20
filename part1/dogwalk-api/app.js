@@ -18,7 +18,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 
-app.get('/api/dogs', async)
+app.get('/api/dogs', async (req, res =>) {
+    try {
+        
+    }
+})
 
 
 module.exports = app;
