@@ -71,7 +71,10 @@
                 cursor: crosshair; /* Accessibility + kinematic violation */
             }
 
-            
+            @keyframes wiggle {
+                0% {transform: rotate(-5deg);
+                }
+            }
             /* Cognitive overload with too much information */
             .info-block {
                 background: repeating-linear-gradient(45deg, magenta 10px, cyan 10px, cyan 20px);
