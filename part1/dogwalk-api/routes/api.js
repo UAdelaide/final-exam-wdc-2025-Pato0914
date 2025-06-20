@@ -18,5 +18,8 @@ router.get('/dogs', async (req, res) => {
             JOIN Users ON Dogs.owner_id = Users.user_id
         `);
         res.json(rows);
+    } catch (err) {
+        console.error(err);
+        
     }
 })
