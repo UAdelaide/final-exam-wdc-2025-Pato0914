@@ -128,7 +128,12 @@
         <script>
             const { createApp } = Vue;
             createApp ({
-                data()
+                data() {
+                    return {
+                        dogImage: ''
+                    }
+                },
+                mounted
             })
         </script>
     </body>
