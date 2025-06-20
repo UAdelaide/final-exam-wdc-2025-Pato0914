@@ -12,6 +12,7 @@ const pool = mysql.createPool({
 
 router.get('/dogs', async (req, res) => {
     try {
-        
+        const [rows] = await pool.query(`
+            `)
     }
 })
