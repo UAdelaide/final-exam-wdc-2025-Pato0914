@@ -48,6 +48,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
             walkrequest.requested_time,
             walkrequest.duration_minutes,
             walkrequest.location,
+            user.username AS owner_username
             `)
     }
 })
