@@ -79,9 +79,8 @@ app.get('/api/walkers/summary', async (req, res) => {
         res.json(rows);
     } catch (err) {
         console.error('DB Error:', err.message);
-        res.status(500).json({ error: 'Failed to fetch open walk req)
-
+        res.status(500).json({ error: 'Failed to fetch walk summary'});
     }
-})
+});
 
 module.exports = app;
