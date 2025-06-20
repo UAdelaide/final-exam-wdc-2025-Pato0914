@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'DogWalkService'
 });
 
