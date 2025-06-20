@@ -77,6 +77,8 @@ app.get('/api/walkers/summary', async (req, res) => {
             GROUP BY user.user_id
         `);
         res.json(rows);
+    } catch (err) {
+        console.error('DB Error:', err)
     }
 })
 
