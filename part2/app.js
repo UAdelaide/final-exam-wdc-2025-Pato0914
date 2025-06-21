@@ -79,6 +79,8 @@ const verifyWalker = (req, res, next) => {
   next();
 };
 
+// Route to Check Auth Session
+app.get('/api/auth/check')
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
