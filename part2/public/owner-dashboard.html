@@ -88,9 +88,9 @@
         const error = ref('');
         const username = ref('');
 
-        const verifyLogin = async () => {
+        async function verifyLogin() {
           try {
-            const res = await fetch ('/api/auth/check', { credentials: 'include' });
+            const res = await fetch ('/api/auth/check';
             if (!res.ok) return window.location.href = '/';
             const user = await response.json();
 
