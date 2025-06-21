@@ -92,7 +92,7 @@
           try {
             const res = await fetch ('/api/auth/check');
             if (!res.ok) return window.location.href = '/';
-            const user = await response.json();
+            const user = await res.json();
 
             if (user.role !== 'owner') {
               window.location.href = user.role == 'walker' ? '/walker-dashboard.html' : '/';
