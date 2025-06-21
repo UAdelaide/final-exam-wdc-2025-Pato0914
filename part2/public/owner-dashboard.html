@@ -94,7 +94,9 @@
             if (!res.ok) return window.location.href = '/';
             const user = await response.json();
 
-            if (user.role !== 'owner')
+            if (user.role !== 'owner') {
+              window.location.href = user.role == 'walker'
+            }
           }
         }
 
