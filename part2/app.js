@@ -101,7 +101,11 @@ app.get('/api/auth/check', (req, res) => {
 });
 
 // Retrieve Dogs for Logged-In Owner
-app.get('/api/dogs')
+app.get('/api/dogs', verifyUser, async (req, res) => {
+    try {
+        
+    }
+})
 
 // Get Logged-In User Info
 app.get('/api/users/me', verifyUser, (req, res) => {
