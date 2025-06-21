@@ -214,7 +214,10 @@
       try {
         const res = await fetch('/api/dogs/all');
         const dogs = await res.json();
-        const tbody = document.getElementById('dogs')
+        const tbody = document.getElementById('dogs-table-body');
+        tbody.innerHTML = '';
+
+        if (dogs.length)
       }
     }
   </script>
