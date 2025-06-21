@@ -91,7 +91,7 @@ app.get('/api/auth/check', (req, res) => {
     });
 });
 
-// -- Get Logged-In User Info --
+// Get Logged-In User Info
 app.get('/api/users/me', verifyUser, (req, res) => {
   res.json({
     userId: req.session.userId,
