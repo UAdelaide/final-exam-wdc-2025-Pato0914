@@ -210,8 +210,11 @@
       }
     });
 
-    async function name(params) {
-      
+    async function loadDogsIntoTables() {
+      try {
+        const res = await fetch('/api/dogs/all');
+        
+      }
     }
   </script>
 
