@@ -159,6 +159,7 @@
           }
         };
 
+        // Logout function - destroys session and redirects
         const performLogout = async () => {
           try {
             await fetch('/logout', { method: 'POST', credentials: 'include' });
@@ -167,6 +168,7 @@
           }
         };
 
+        // Lifecycle hook
         onMounted(() => {
           verifyLogin().then(() => {
             loadWalks();
