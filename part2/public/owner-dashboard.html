@@ -103,6 +103,7 @@
             const user = await res.json();
 
             if (user.role !== 'owner') {
+              // Redirect user based on role
               window.location.href = user.role == 'walker' ? '/walker-dashboard.html' : '/';
               return;
             }
@@ -112,6 +113,7 @@
           }
         };
 
+        // Fetch walk requests from API
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
