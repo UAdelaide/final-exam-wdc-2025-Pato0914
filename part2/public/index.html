@@ -122,8 +122,8 @@
   <div class="container">
     <div class="auth-panel">
       <h3>User Login</h3>
-      <div id="error-message"></div>
-      <form @submit.prevent="login" class="mb-4 w-50">
+      <div id="error-message" class="error-box"></div>
+      <form id="login-form" method="POST">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input v-model="username" type="text" id="username" class="form-control" required>
