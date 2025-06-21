@@ -82,8 +82,11 @@ const verifyWalker = (req, res, next) => {
 // Route to Check Auth Session
 app.get('/api/auth/check', (req, res) => {
     if (!req.session.userId) {
-        return res.status(401).json({ message})
+        return res.status(401).json({ message: 'Session not found' });
     }
+    res.json({
+        userId: req.session.
+    })
 })
 
 // Routes
