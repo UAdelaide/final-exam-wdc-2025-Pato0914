@@ -148,7 +148,11 @@
       e.preventDefault();
 
       const formData = new FormData(this);
-      const errorBox = document.getElementById
+      const errorBox = document.getElementById('error-message');
+
+      try {
+        const response = await fetch('/login')
+      }
     })
       methods: {
         async login() {
