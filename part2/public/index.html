@@ -227,6 +227,7 @@
           return;
         }
 
+        // For each dog, get a random photo and create a row
         for (const dog of dogs) {
           const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
           const imgData = await imgRes.json();
