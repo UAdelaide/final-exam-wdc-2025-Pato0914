@@ -48,9 +48,9 @@ app.post('/login', async (req, res) => {
         return res.json({ success: true, role: user.role, username: user.username });
     } catch (err) {
         console.error('Login error:', err);
-        res.status(500)
+        res.status(500).json({ message: 'Login process failed' });
     }
-})
+});
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
