@@ -92,7 +92,9 @@
           try {
             const res = await fetch ('/api/auth/check', { credentials: 'include' });
             if (!res.ok) return window.location.href = '/';
-            
+            const user = await response.json();
+
+            if (user.role !== 'owner')
           }
         }
 
