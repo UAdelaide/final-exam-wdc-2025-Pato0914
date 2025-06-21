@@ -95,7 +95,7 @@
             const user = await response.json();
 
             if (user.role !== 'owner') {
-              window.location.href = user.role == 'walker'
+              window.location.href = user.role == 'walker' ? '/walker-dashboard.html' : '/';
             }
           }
         }
