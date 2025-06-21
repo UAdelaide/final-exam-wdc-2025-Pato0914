@@ -80,7 +80,8 @@
         }
 
         async function getCurrentUser() {
-          const res = 
+          const res = await ('/api/users/me');
+          if (!res.ok) 
         }
 
         async function applyToWalk(requestId) {
