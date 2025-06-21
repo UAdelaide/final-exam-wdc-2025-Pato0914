@@ -63,7 +63,8 @@ app.post('/login', async (req, res) => {
     }
 });
 
-
+// Middleware for Authentication
+const verifyUser = (req, res, next)
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
