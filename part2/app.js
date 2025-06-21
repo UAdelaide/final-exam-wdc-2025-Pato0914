@@ -137,9 +137,10 @@ app.get('/api/dogs/all', async (req, res) => {
         await db.end();
         res.json(dogs);
     } catch (err) {
-        console.error()
+        console.error('Public dog fetch error:', err);
+        res.status(500).json({ message: 'Unable to retrieve dog list' });
     }
-})
+});
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
