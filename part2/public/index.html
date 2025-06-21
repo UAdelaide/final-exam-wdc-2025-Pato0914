@@ -239,7 +239,7 @@
       } catch (err) {
         console.error('Dog loading error:', err);
         const tbody = document.getElementById('dogs-table-body');
-        
+        tbody.innerHTML = '<tr><td colspan="5" class="text-danger">Error fetching dog data.</td></tr>';
       }
     }
   </script>
