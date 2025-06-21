@@ -20,12 +20,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Handle User Login
-app.post('/login', async (req, this.resource,))
+app.post('/login', async (req, res,))
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const { allowedNodeEnvironmentFlags } = require('process');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
