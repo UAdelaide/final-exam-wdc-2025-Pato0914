@@ -155,7 +155,8 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            username: for
+            username: formData.get('username'),
+            password: formData.get('password')
           })
         })
       }
