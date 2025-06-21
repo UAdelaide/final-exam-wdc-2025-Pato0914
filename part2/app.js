@@ -125,6 +125,9 @@ app.get('/api/users/me', verifyUser, (req, res) => {
   });
 });
 
+// Public Route to Get all Dogs
+app.get('')
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
