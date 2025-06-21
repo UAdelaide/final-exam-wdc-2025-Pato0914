@@ -118,8 +118,10 @@
             const res = await fetch('/api/dogs', { credentials: 'include' });
             if (!res.ok) throw new Error();
             dogs.value = await res.json();
+          } catch {
+            error.value = 'Could not load dog data.';
           }
-        }
+        };
 
         async function submitWalkRequest() {
           try {
@@ -158,6 +160,7 @@
         onMounted(() => {
           verifyLogin().then(() => {
             loadWalks();
+            loadDogs();
           })
         });
 
