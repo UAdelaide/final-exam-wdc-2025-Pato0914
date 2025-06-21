@@ -20,7 +20,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Handle User Login
-app.post('/login', async (req, res,))
+app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    
+})
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
