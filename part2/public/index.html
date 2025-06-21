@@ -234,7 +234,10 @@
             <td>${dog.owner_username}</td>
             <td><img src="${imgData.message}" alt="${dog.name}" width="150" height="100" style="object-fit: cover; border-radius: 8px;"></td>
           `;
+          tbody.appendChild(row);
         }
+      } catch (err) {
+        console.error()
       }
     }
   </script>
