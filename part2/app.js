@@ -33,7 +33,9 @@ app.post('/login', async (req, res) => {
             'SELECT user_id, username, password_hash, role FROM Users WHERE username = ?',
             [username]
         );
-        await conn.
+        await conn.end();
+
+        if (result.length === 0)
     }
 })
 
