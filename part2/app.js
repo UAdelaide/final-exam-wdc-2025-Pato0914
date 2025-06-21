@@ -85,7 +85,9 @@ app.get('/api/auth/check', (req, res) => {
         return res.status(401).json({ message: 'Session not found' });
     }
     res.json({
-        userId: req.session.
+        userId: req.session.userId,
+        username: req.session.username,
+        role: req.session
     })
 })
 
