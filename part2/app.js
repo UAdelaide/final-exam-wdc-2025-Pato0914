@@ -134,6 +134,10 @@ app.get('/api/dogs/all', async (req, res) => {
             FROM Dogs dog
             JOIN Users user ON dog.owner_id = user.user_id
         `);
+        await db.end();
+        res.json(dogs);
+    } catch (err) {
+        console.error()
     }
 })
 
