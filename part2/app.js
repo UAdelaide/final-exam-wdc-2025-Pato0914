@@ -29,7 +29,9 @@ app.post('/login', async (req, res) => {
 
     try {
         const conn = await mysql.createConnection(dbOptions);
-        
+        const [result] = await conn.execute(
+            
+        )
     }
 })
 
