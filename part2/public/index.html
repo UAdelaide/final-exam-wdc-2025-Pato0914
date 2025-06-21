@@ -177,7 +177,8 @@
           errorBox.style.display = 'block';
         }
       } catch (err) {
-        
+        errorBox.textContent = 'Network error. Please try again.';
+        errorBox.style.display = 'block';
       }
     });
 
