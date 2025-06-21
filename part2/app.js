@@ -91,6 +91,15 @@ app.get('/api/auth/check', (req, res) => {
     });
 });
 
+// -- Get Logged-In User Info --
+app.get('/api/users/me', verifyUser, (req, res) => {
+  res.json({
+    userId: req.session.userId,
+    username: req.session.username,
+    role: req.session.role
+  });
+});
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
