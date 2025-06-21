@@ -18,7 +18,11 @@ const dbOptions = {
 // Session Settings
 app.use(session({
     secret: 'walkapp-session-secret',
-    resave: false;
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        secure
+    }
 }))
 
 // Middleware
