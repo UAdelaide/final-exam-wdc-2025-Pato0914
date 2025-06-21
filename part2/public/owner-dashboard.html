@@ -116,7 +116,8 @@
         async function loadDogs() {
           try {
             const res = await fetch('/api/dogs', { credentials: 'include' });
-            if (!res.ok) throw new Error
+            if (!res.ok) throw new Error();
+            dogs.value = await res.json();
           }
         }
 
