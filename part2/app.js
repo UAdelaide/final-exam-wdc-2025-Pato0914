@@ -35,7 +35,9 @@ app.post('/login', async (req, res) => {
         );
         await conn.end();
 
-        if (result.length === 0)
+        if (result.length === 0 || result[0].password_hash !== password) {
+            return res.status(401).json
+        }
     }
 })
 
