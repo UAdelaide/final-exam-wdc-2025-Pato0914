@@ -15,7 +15,11 @@ const dbOptions = {
     database: 'DogWalkService'
 };
 
-
+// Session Settings
+app.use(session({
+    secret: 'walkapp-session-secret',
+    resave: false;
+}))
 
 // Middleware
 app.use(express.json());
