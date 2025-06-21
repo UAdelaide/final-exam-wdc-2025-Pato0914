@@ -16,7 +16,7 @@ const dbOptions = {
 
 // Middleware
 app.use(express.json());
-app.use()
+app.use(express.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, '/public')));
 
 // Routes
