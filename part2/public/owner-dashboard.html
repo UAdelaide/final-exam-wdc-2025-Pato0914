@@ -90,7 +90,8 @@
 
         const verifyLogin = async () => {
           try {
-            const res = await fetch ('/api/auth/check')
+            const res = await fetch ('/api/auth/check', { credentials: 'include' });
+            
           }
         }
 
