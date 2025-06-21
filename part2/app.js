@@ -70,7 +70,7 @@ const verifyUser = (req, res, next) => {
 };
 
 const verifyOwner = (req, res, next) => {
-    if (req)
+    if (req.session.role != 'owner') return res.status(403).json({ message: 'Please log in' });
 }
 
 // Routes
