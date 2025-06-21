@@ -103,7 +103,10 @@ app.get('/api/auth/check', (req, res) => {
 // Retrieve Dogs for Logged-In Owner
 app.get('/api/dogs', verifyUser, async (req, res) => {
     try {
-        
+        const db = await mysql.createConnection(dbOptions);
+        const [dogs] = await db.execute(
+            
+        )
     }
 })
 
