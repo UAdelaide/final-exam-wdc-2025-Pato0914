@@ -109,6 +109,7 @@
           }
         }
 
+        // Logout and redirects to homepage
         const performLogout = async () => {
           try {
             await fetch('/logout', { method: 'POST', credentials: 'include' });
