@@ -91,6 +91,7 @@
         const verifyLogin = async () => {
           try {
             const res = await fetch ('/api/auth/check', { credentials: 'include' });
+            if (!res.ok) return window.location.href = '/';
             
           }
         }
