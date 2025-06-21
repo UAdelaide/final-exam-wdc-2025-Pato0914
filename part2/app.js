@@ -111,7 +111,8 @@ app.get('/api/dogs', verifyUser, async (req, res) => {
         await db.end();
         res.json(dogs);
     } catch (err) {
-        console.err('Owner dog fetch error:')
+        console.err('Owner dog fetch error:', err);
+        res.status(500).json({})
     }
 })
 
