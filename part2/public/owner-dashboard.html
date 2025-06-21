@@ -148,8 +148,9 @@
         };
 
         onMounted(() => {
-          verifyLogin().then(())
-          loadWalks();
+          verifyLogin().then(() => {
+            loadWalks();
+          })
         });
 
         return {
