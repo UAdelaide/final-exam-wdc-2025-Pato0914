@@ -90,7 +90,7 @@
 
         async function applyToWalk(requestId) {
           try {
-            const currentUser = await getCurrentUser();
+            const currentUser = await getCurrentUser(); // Use current session info
 
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
