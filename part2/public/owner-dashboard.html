@@ -96,7 +96,11 @@
 
             if (user.role !== 'owner') {
               window.location.href = user.role == 'walker' ? '/walker-dashboard.html' : '/';
+              return;
             }
+            username.value = user.username;
+          } catch {
+            
           }
         }
 
