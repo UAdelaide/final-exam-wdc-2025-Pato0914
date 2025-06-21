@@ -237,7 +237,9 @@
           tbody.appendChild(row);
         }
       } catch (err) {
-        console.error()
+        console.error('Dog loading error:', err);
+        const tbody = document.getElementById('dogs-table-body');
+        
       }
     }
   </script>
