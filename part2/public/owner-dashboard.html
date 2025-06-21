@@ -168,7 +168,7 @@
           }
         };
 
-        // Lifecycle hook
+        // Lifecycle hook that verify login and load data on page load
         onMounted(() => {
           verifyLogin().then(() => {
             loadWalks();
