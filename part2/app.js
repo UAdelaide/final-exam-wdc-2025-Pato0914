@@ -22,7 +22,10 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Handle User Login
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
-    
+
+    if (!username || !password) {
+        return res.status(400).json
+    }
 })
 
 // Routes
