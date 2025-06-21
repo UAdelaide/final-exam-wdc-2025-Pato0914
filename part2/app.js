@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const session = require('express-session');
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 
@@ -39,7 +40,7 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ message: 'Invalid credentials' });
         }
 
-        const user = result
+        const user = result[0];
     }
 })
 
