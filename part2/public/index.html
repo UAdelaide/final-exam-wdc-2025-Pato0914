@@ -217,7 +217,10 @@
         const tbody = document.getElementById('dogs-table-body');
         tbody.innerHTML = '';
 
-        if (dogs.length)
+        if (dogs.length === 0) {
+          tbody.innerHTML = '<tr><td colspan="5">No dogs found.</td></tr>';
+          
+        }
       }
     }
   </script>
