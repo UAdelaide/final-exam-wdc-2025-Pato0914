@@ -177,27 +177,8 @@
           errorBox.style.display = 'block';
         }
       }
-    })
-      methods: {
-        async login() {
-          const response = await fetch ('/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              username: this.username,
-              password: this.password
-            })
-          });
-
-          const result = await response.json();
-          if (result.success) {
-            window.location.href = result.redirect;
-          } else {
-            this.error = 'Invalid username or password.';
-          }
-        }
-      }
-    }).mount('#app');
+    });
+      
   </script>
 
 
