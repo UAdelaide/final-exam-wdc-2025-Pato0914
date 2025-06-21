@@ -127,7 +127,10 @@ app.get('/api/users/me', verifyUser, (req, res) => {
 
 // Public Route to Get all Dogs
 app.get('/api/dogs/all', async (req, res) => {
-    
+    try {
+        const db = await mysql.createConnection(dbOptions);
+        const [dogs] = await db.execute()
+    }
 })
 
 // Routes
