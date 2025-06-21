@@ -213,7 +213,8 @@
     async function loadDogsIntoTables() {
       try {
         const res = await fetch('/api/dogs/all');
-        
+        const dogs = await res.json();
+        const tbody = document.getElementById('dogs')
       }
     }
   </script>
