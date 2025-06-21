@@ -44,6 +44,10 @@ app.post('/login', async (req, res) => {
         req.session.userId = user.user_id;
         req.session.username = user.username;
         req.session.role = user.role;
+
+        return res.json({ success: true, role: user.role, username: user.username });
+    } catch (err) {
+        
     }
 })
 
