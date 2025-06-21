@@ -54,6 +54,7 @@
         // const user = 3;
         const userId = ref(null); // Current user's ID
 
+        // Verifies user session and role
         async function verifyUser() {
           try {
             const res = await fetch ('/api/auth/check');
