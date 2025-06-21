@@ -130,7 +130,9 @@ app.get('/api/dogs/all', async (req, res) => {
     try {
         const db = await mysql.createConnection(dbOptions);
         const [dogs] = await db.execute(`
-            SELECT dog.dog_id, dog.name, dog.size`)
+            SELECT dog.dog_id, dog.name, dog.size, user.username AS owner_username
+            FROM Dogs d
+            JOIN Users `)
     }
 })
 
