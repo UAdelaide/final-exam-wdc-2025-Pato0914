@@ -6,7 +6,10 @@ require('dotenv').config();
 
 const app = express();
 
-//
+// MySQL Connection Details
+const dbOptions = {
+    
+}
 
 // Middleware
 app.use(express.json());
