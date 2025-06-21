@@ -173,7 +173,8 @@
             errorBox.style.display = 'block';
           }
         } else {
-          errorBox.textContent = result.message || 
+          errorBox.textContent = result.message || 'Login failed. Please try again.';
+          errorBox.style.display = 'block';
         }
       }
     })
