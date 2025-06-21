@@ -95,6 +95,7 @@
         const error = ref('');
         const username = ref('');
 
+        // Verify user session and role
         async function verifyLogin() {
           try {
             const res = await fetch ('/api/auth/check', { credentials: 'include' });
