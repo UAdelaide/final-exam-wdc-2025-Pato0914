@@ -66,7 +66,8 @@ app.post('/login', async (req, res) => {
 
 // Logout Handler
 app.post('/logout', (req, res) => {
-    if (err) return res.status(500).json({ message: 'Logout error' })
+    if (err) return res.status(500).json({ message: 'Logout error' });
+    res.json({ success: true });
 })
 
 // Middleware for Authentication
