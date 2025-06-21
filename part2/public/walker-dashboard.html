@@ -56,7 +56,8 @@
 
         async function verifyUser() {
           try {
-            const res = 
+            const res = await fetch ('/api/auth/check');
+            if (!res.ok)
           }
         }
 
