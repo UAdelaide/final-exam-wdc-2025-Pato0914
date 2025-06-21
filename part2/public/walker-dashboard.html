@@ -60,6 +60,7 @@
             const res = await fetch ('/api/auth/check');
             if (!res.ok) return window.location.href = '/';
             const user = await res.json();
+            // If not a walker, redirect to correct dashboard
             if (user.role !== 'walker') {
               return window.location.href = user.role === 'owner' ? '/owner-dashboard.html' : '/';
             }
