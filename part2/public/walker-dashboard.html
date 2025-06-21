@@ -81,7 +81,13 @@
           }
         }
 
-        async
+        const performLogout = async () => {
+          try {
+            await fetch('/logout', { method: 'POST', credentials: 'include' });
+          } finally {
+            window.location.href = '/';
+          }
+        };
 
         onMounted(() => {
           loadWalkRequests();
@@ -92,6 +98,7 @@
           message,
           error,
           applyToWalk
+          
         };
       }
     }).mount('#app');
