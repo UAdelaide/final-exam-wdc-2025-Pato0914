@@ -30,8 +30,10 @@ app.post('/login', async (req, res) => {
     try {
         const conn = await mysql.createConnection(dbOptions);
         const [result] = await conn.execute(
-            
-        )
+            'SELECT user_id, username, password_hash, role FROM Users WHERE username = ?',
+            [username]
+        );
+        await conn.
     }
 })
 
