@@ -87,9 +87,9 @@ app.get('/api/auth/check', (req, res) => {
     res.json({
         userId: req.session.userId,
         username: req.session.username,
-        role: req.session
-    })
-})
+        role: req.session.role
+    });
+});
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
