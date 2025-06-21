@@ -118,6 +118,7 @@
           }
         };
 
+        // Load data when component mounts
         onMounted(() => {
           verifyUser().then(() => {
             loadWalkRequests();
