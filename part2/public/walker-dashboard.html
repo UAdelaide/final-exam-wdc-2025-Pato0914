@@ -81,7 +81,7 @@
           }
         }
 
-        // A
+        // Fetches currently logged-in user's info
         async function getCurrentUser() {
           const res = await fetch ('/api/users/me', { credentials: 'include' });
           if (!res.ok) throw new Error('Failed to fetch user info');
