@@ -8,8 +8,12 @@ const app = express();
 
 // MySQL Connection Details
 const dbOptions = {
-    
-}
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    password: '',
+    database: 'DogWalkService'
+};
 
 // Middleware
 app.use(express.json());
