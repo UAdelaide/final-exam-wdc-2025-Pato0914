@@ -36,7 +36,7 @@ app.post('/login', async (req, res) => {
         await conn.end();
 
         if (result.length === 0 || result[0].password_hash !== password) {
-            return res.status(401).json
+            return res.status(401).json({ message: 'Invalid username or password' });
         }
     }
 })
