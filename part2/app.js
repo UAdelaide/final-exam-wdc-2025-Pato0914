@@ -70,9 +70,15 @@ const verifyUser = (req, res, next) => {
 };
 
 const verifyOwner = (req, res, next) => {
-    if (req.session.role != 'owner') return res.status(403).json({ message: 'Access restricted to owners' });
-    
-}
+    if (req.session.role !== 'owner') return res.status(403).json({ message: 'Access restricted to owners' });
+    next();
+};
+
+const verifyWalker = (req, res, next) => {
+  if (req.session.role !== 'walker') return res.status(403).json({ message: 'Access restricted to walkers' });
+  next();
+};
+
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
