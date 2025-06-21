@@ -64,7 +64,9 @@ app.post('/login', async (req, res) => {
 });
 
 // Middleware for Authentication
-const verifyUser = (req, res, next)
+const verifyUser = (req, res, next) => {
+    if (!req.session.userId) return res.status(401).json
+}
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
