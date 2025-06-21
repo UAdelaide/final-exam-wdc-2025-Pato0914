@@ -10,7 +10,7 @@ const app = express();
 const dbOptions = {
     host: 'localhost',
     user: 'root',
-    password: '',
+    // password: 'root', # comment out this part and created empty for testing use
     password: '',
     database: 'DogWalkService'
 };
