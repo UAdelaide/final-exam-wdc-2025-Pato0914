@@ -41,7 +41,9 @@ app.post('/login', async (req, res) => {
         }
 
         const user = result[0];
-        req.session.userId = 
+        req.session.userId = user.user_id;
+        req.session.username = user.username;
+        req.session.role = user.role;
     }
 })
 
