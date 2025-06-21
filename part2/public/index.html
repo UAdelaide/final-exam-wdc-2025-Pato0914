@@ -173,7 +173,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!--  JS to handle login form submission -->
+  <!-- JS to handle login form submission -->
   <script>
     document.getElementById('login-form').addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -195,6 +195,7 @@
         const result = await response.json();
 
         if (response.ok) {
+          // Redirect based on user role
           if (result.role === 'owner') {
             window.location.href = '/owner-dashboard.html';
           } else if (result.role == 'walker') {
@@ -213,6 +214,7 @@
       }
     });
 
+    /
     async function loadDogsIntoTables() {
       try {
         const res = await fetch('/api/dogs/all');
