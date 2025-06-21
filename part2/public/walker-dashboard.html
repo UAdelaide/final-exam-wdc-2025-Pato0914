@@ -113,6 +113,9 @@
         };
 
         onMounted(() => {
+          verifyUser().then(() => {
+            
+          })
           loadWalkRequests();
         });
 
