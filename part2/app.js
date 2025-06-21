@@ -129,7 +129,8 @@ app.get('/api/users/me', verifyUser, (req, res) => {
 app.get('/api/dogs/all', async (req, res) => {
     try {
         const db = await mysql.createConnection(dbOptions);
-        const [dogs] = await db.execute()
+        const [dogs] = await db.execute(`
+            SELECT dog.dog_id, dog.name, dog.size`)
     }
 })
 
